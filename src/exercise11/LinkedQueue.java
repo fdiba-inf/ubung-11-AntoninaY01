@@ -18,15 +18,16 @@ public class LinkedQueue {
         }else{
           backNode.setNextNode(newNode);
           backNode = newNode;
+        }
     }
 
     public String poll() {
-        if(isEmpty()){
+        if(isEmpty()) {
           return null;
         }else {
           String data = frontNode.getData();
           frontNode = frontNode.getNextNode();
-          if(frontNode == null){
+          if(frontNode == null) {
             backNode = null;
 
           }
@@ -38,5 +39,5 @@ public class LinkedQueue {
     public String toString() {
         return NodeUtils.createNodeTraversalString(frontNode);
     }
-}
+ 
 }
